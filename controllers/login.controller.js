@@ -20,7 +20,6 @@ const registration = async (req, res) => {
       country,
       profileImgUrl,
     } = req.body;
-    console.log("I am coming here");
     const user = await User.findOne({
       $or: [{ userName: userName }, { email: email }],
     });
